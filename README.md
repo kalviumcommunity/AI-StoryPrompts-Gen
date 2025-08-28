@@ -3,6 +3,7 @@
 **Description:**
 The AI Story Prompt Generator is an AI-powered tool designed to help writers, artists, and creators generate imaginative prompts to inspire stories, artwork, or other creative works. It is perfect for overcoming writer’s block and sparking creativity by providing fresh, high-quality ideas.
 
+
 **Why Useful:**
 
 * Boosts creativity and idea generation.
@@ -10,11 +11,14 @@ The AI Story Prompt Generator is an AI-powered tool designed to help writers, ar
 * Helps maintain consistent content creation.
 * Supports multiple genres, themes, and styles.
 
+
 ---
 
 ## **Features & Concept Mapping**
 
+
 **Prompt Concepts:**
+
 
 * **System and User Prompt:** Clearly defines the AI role as a creative assistant and accepts user topic or theme.
 * **Zero-Shot Prompting:** Generates prompts without any prior examples.
@@ -23,7 +27,9 @@ The AI Story Prompt Generator is an AI-powered tool designed to help writers, ar
 * **Dynamic Prompting:** Prompts adapt automatically based on user input (genre, theme, or style).
 * **Chain of Thought Prompting:** AI explains its reasoning before generating prompts.
 
+
 **LLM Features:**
+
 
 * **Temperature:** Adjusts creativity and randomness of outputs.
 * **Top P / Top K:** Controls diversity of generated ideas.
@@ -32,11 +38,13 @@ The AI Story Prompt Generator is an AI-powered tool designed to help writers, ar
 
 **Tokens and Tokenization:**
 
+
 * Monitors the number of tokens used per AI call to track efficiency and cost.
 
 ---
 
 ## **Sample Usage / Test Inputs**
+
 
 Try these example topics to generate story prompts:
 
@@ -48,7 +56,8 @@ Try these example topics to generate story prompts:
 
 ---
 
-## **Tech Stack**
+
+## **Tech Stack USED**
 
 * **Python** – Backend scripting.
 * **Groq LLM API** – AI language model for generating story prompts.
