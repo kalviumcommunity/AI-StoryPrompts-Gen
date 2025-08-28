@@ -3,7 +3,7 @@ import streamlit as st
 from src.groq_client import (
     get_ai_response,
     build_zero_shot_prompt,
-    
+
     build_one_shot_prompt,
 
     build_multi_shot_prompt
@@ -60,6 +60,7 @@ if submit and topic.strip():
     with st.spinner("Generating prompts..."):
         ai_response = get_ai_response(prompt, stream=stream_mode)
         formatted_response = format_ai_output(ai_response)
+        
 
     # Display nicely as numbered list
     st.markdown("**Generated Story Prompts:**")
