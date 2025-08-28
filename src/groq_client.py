@@ -85,10 +85,13 @@ def get_ai_response(prompt, stream=False):
             temperature=0.7,
             max_completion_tokens=1024,
             top_p=1
+
         )
         tokens_used = getattr(response.usage, "total_tokens", None)
         if tokens_used is not None:
             print(f"Tokens used: {tokens_used}")
         # Return safe string
+
+        
         message_content = getattr(response.choices[0].message, "content", "")
         return message_content or ""
