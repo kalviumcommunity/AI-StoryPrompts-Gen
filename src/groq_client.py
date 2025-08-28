@@ -52,8 +52,6 @@ Examples:
 
 Now generate prompts for "{topic}".
 """
-
-
 def get_ai_response(prompt, stream=False):
     """
     Call Groq LLM with prompt. Supports streaming if stream=True.
@@ -65,17 +63,16 @@ def get_ai_response(prompt, stream=False):
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
             max_completion_tokens=1024,
-            top_p=1,
+            top_p=0.9,  # Added top_p for nucleus sampling
             stream=True,
             stop=None
         )
         response_text = ""
         for chunk in completion:
-            # Use getattr safely
             delta = getattr(chunk.choices[0], "delta", None)
             if delta:
                 content = getattr(delta, "content", "")
-                if content:  # Only append if not None or empty
+                if content:
                     print(content, end="", flush=True)
                     response_text += content
         print()
@@ -86,14 +83,15 @@ def get_ai_response(prompt, stream=False):
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
             max_completion_tokens=1024,
-            top_p=1
-
-
+            top_p=0.9  # Added top_p for nucleus sampling
         )
         tokens_used = getattr(response.usage, "total_tokens", None)
         if tokens_used is not None:
             print(f"Tokens used: {tokens_used}")
-        # Return safe string
 
         message_content = getattr(response.choices[0].message, "content", "")
         return message_content or ""
+
+
+
+       
