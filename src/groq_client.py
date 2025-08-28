@@ -24,8 +24,12 @@ Prompts:
 1. A young dragon discovers its hidden powers while exploring ancient ruins.
 2. A village must unite to stop a rogue dragon from destroying their home.
 
+
 Now generate prompts for "{topic}".
 """
+
+
+
 
 
 def build_multi_shot_prompt(topic):
@@ -36,7 +40,8 @@ Examples:
 1) Topic: Time travel adventure
    Prompts:
    1. A teenager accidentally travels to the past and must prevent a disaster.
-   2. Two friends discover a time machine and explore historical events.
+   2. Two friends discover a time machine and explore historicals events.
+
 
 2) Topic: Alien invasion
    Prompts:
