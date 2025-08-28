@@ -19,8 +19,10 @@ def build_one_shot_prompt(topic):
     return f"""
 You are a creative AI assistant. Generate 5 imaginative story prompts based on this topic: "{topic}".
 Example:
+
 Topic: Fantasy with dragons
 Prompts:
+
 1. A young dragon discovers its hidden powers while exploring ancient ruins.
 2. A village must unite to stop a rogue dragon from destroying their home.
 
@@ -92,6 +94,6 @@ def get_ai_response(prompt, stream=False):
             print(f"Tokens used: {tokens_used}")
         # Return safe string
 
-        
+
         message_content = getattr(response.choices[0].message, "content", "")
         return message_content or ""
